@@ -12,7 +12,7 @@ class GtkController extends Controller
 
 public function test()
 {
-    return view('GregorianToKurdishCalendar::gtk');
+    return view('gtk::gtk');
 }
    
 }
