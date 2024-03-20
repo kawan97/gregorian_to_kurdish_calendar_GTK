@@ -1,6 +1,6 @@
 <?php
 
-namespace kawan\gregorian_to_kurdish_calendar\Http\Controllers;
+namespace Kawan\GregorianToKurdishCalendar\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -12,7 +12,7 @@ class GtkController extends Controller
 
 public function test()
 {
-    return 'test';
+    return view('GregorianToKurdishCalendar::gtk');
 }
    
 }
