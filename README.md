@@ -7,10 +7,10 @@ Convert gregorian calendar to kurdish calendar
 
 ## Installation
 
-You can install the "gregorian_to_kurdish_calendar" package via Composer by running the following command:
+You can install the "GregorianToKurdishCalendar" package via Composer by running the following command:
 
    ```php
-    composer require kawan/gregorian_to_kurdish_calendar
+    composer require kawan/GregorianToKurdishCalendar
    ```
 
 ## Getting Started

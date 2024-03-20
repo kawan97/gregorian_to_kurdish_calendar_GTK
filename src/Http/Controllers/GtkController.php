@@ -1,6 +1,6 @@
 <?php
 
-namespace Kawan\GTK\Http\Controllers;
+namespace Kawan\GregorianToKurdishCalendar\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
