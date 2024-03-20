@@ -1,5 +1,5 @@
 {
-    "name": "Kawan/GregorianToKurdishCalendar",
+    "name": "kawan/gregorian_to_kurdish_calendar",
     "description": "Convert gregorian calendar to kurdish calendar",
     "type": "library",
     "license": "MIT",
