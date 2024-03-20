@@ -10,6 +10,9 @@ use \Exception;
 class GtkController extends Controller
 {
 
-
+public function test()
+{
+    return 'slaw';
+}
    
 }
