@@ -3,8 +3,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/kawan/gregorian_to_kurdish_calendar)](https://packagist.org/packages/kawan/gregorian_to_kurdish_calendar)
 [![Latest Version](https://img.shields.io/packagist/v/kawan/gregorian_to_kurdish_calendar)](https://packagist.org/packages/kawan/gregorian_to_kurdish_calendar)
 
-Generate a route that, when accessed, will traverse through all files,
-remove specific code segments from each file, and reset your database to an empty state.
+Convert gregorian calendar to kurdish calendar
 
 ## Installation
 

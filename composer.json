@@ -17,7 +17,10 @@
     "autoload": {
         "psr-4": {
             "Kawan\\GTK\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "extra": {
         "laravel": {
