@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Kawan\\GregorianToKurdishCalendar\\": "src/"
+            "kawan\\gregorian_to_kurdish_calendar\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -25,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kawan\\GregorianToKurdishCalendar\\GtkServiceProvider"
+                "kawan\\gregorian_to_kurdish_calendar\\GtkServiceProvider"
             ]
         }
     }

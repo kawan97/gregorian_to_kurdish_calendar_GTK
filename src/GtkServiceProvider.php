@@ -1,6 +1,6 @@
 <?php
 
-namespace Kawan\GregorianToKurdishCalendar;
+namespace kawan\gregorian_to_kurdish_calendar;
 
 use Illuminate\Support\ServiceProvider;
 
