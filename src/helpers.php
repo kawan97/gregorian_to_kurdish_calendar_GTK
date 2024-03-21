@@ -57,6 +57,26 @@ function gregorian_to_kurdish($date, $format = 'Y-m-d')
             $kurdish_am_pm = get_kurdish_am_and_pm($date);
             $result .= $kurdish_am_pm;
             break;
+          case 'G':
+            //initialize kurdish hour
+            $kurdish_hour = get_hour_24($date);
+            $result .= translate_number_to_kurdish($kurdish_hour);
+            break;
+          case 'g':
+            //initialize kurdish hour
+            $kurdish_hour = get_hour_12($date);
+            $result .= translate_number_to_kurdish($kurdish_hour);
+            break;
+          case 'i':
+            //initialize kurdish minute
+            $kurdish_minute = get_minute($date);
+            $result .= translate_number_to_kurdish($kurdish_minute);
+            break;
+          case 's':
+            //initialize kurdish second
+            $kurdish_second = get_second($date);
+            $result .= translate_number_to_kurdish($kurdish_second);
+            break;
          default:
             $result .= $char;
             break;
@@ -87,6 +107,29 @@ function translate_number_to_kurdish($number)
     $kurdish_number .= $kurdish_numbers[$num];
   }
   return $kurdish_number;
+}
+
+function get_hour_24($date)
+{
+  //get hour only
+  return date('G', strtotime($date));
+}
+
+function get_hour_12($date)
+{
+  //get hour only
+  return date('g', strtotime($date));
+}
+
+function get_minute($date)
+{
+  //get minute only
+  return date('i', strtotime($date));
+}
+function get_second($date)
+{
+  //get second only
+  return date('s', strtotime($date));
 }
 
 function get_kurdish_am_and_pm($date)
