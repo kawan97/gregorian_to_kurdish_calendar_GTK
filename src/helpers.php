@@ -4,27 +4,14 @@ function gtk_test()
 {
    return 'test';
 }
-//initialize kurdish month name
-$kurdish_months = array(
-   '1' => 'نەورۆز',
-   '2' => 'گوڵان',
-   '3' => 'جۆزەردان',
-   '4' => 'پوشپەڕ',
-   '5' => 'خەرمانان',
-   '6' => 'گەلاوێژ',
-   '7' => 'ڕەزبەر',
-   '8' => 'خەزەڵوەر',
-   '9' => 'سەرماوەز',
-   '10' => 'بەفرانبار',
-   '11' => 'ڕێبەندان',
-   '12' => 'ڕەشەمێ',
- );
+
 
 
 function gregorian_to_kurdish($date, $format = 'Y-m-d')
 {
    //convert $date to date format
    $date = date(($date));
+  //  dd($date);
    $result = '';
    //foreach for $format
    // dd(str_split($format));
@@ -65,6 +52,11 @@ function gregorian_to_kurdish($date, $format = 'Y-m-d')
             $kurdish_month_name = get_kurdish_month_name($kurdish_month_name);
             $result .= $kurdish_month_name;
             break;
+          case 'a':
+            //initialize kurdish am and pm
+            $kurdish_am_pm = get_kurdish_am_and_pm($date);
+            $result .= $kurdish_am_pm;
+            break;
          default:
             $result .= $char;
             break;
@@ -95,6 +87,23 @@ function translate_number_to_kurdish($number)
     $kurdish_number .= $kurdish_numbers[$num];
   }
   return $kurdish_number;
+}
+
+function get_kurdish_am_and_pm($date)
+{
+  //get hour only
+  $hour = date('H', strtotime($date));
+  //if hour more than 12
+  if ($hour >= 12) {
+    //return pm
+    return 'د.ن';
+  }
+  //if hour less than 12
+  if ($hour < 12) {
+    //return am
+    return 'پ.ن';
+  }
+
 }
 
 function get_kurdish_day_name($date)
@@ -154,12 +163,12 @@ function get_kurdish_year_number($date)
   //get year
   $year = date('Y', strtotime($date));
   //if day lees than 21 and month is 03
-  if ($day < 21 && $month == 03) {
+  if ($day < 21 && $month == 03 || $month < 03) {
     //add 700 to year
     $year = $year + 699;
   }
   //if day more than 20 and month is equal or more than 03
-  if ($day > 20 && $month >= 03) {
+  if ( ($day > 20 && $month == 03) || $month > 03) {
     //add 700 to year
     $year = $year + 700;
   }
@@ -175,6 +184,21 @@ function get_kurdish_month_name($month)
   if ($month < 1 || $month > 12) {
     $month = 01;
   }
+  //initialize kurdish month name
+  $kurdish_months = array(
+    '1' => 'نەورۆز',
+    '2' => 'گوڵان',
+    '3' => 'جۆزەردان',
+    '4' => 'پوشپەڕ',
+    '5' => 'خەرمانان',
+    '6' => 'گەلاوێژ',
+    '7' => 'ڕەزبەر',
+    '8' => 'خەزەڵوەر',
+    '9' => 'سەرماوەز',
+    '10' => 'بەفرانبار',
+    '11' => 'ڕێبەندان',
+    '12' => 'ڕەشەمێ',
+  );
   //return kurdish month name
   return $kurdish_months[$month];
 }
