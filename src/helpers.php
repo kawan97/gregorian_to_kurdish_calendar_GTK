@@ -72,7 +72,7 @@ function gregorian_to_kurdish($date, $format = 'Y-m-d')
             $kurdish_hour = get_hour_12($date);
             $result .= translate_number_to_kurdish($kurdish_hour);
             break;
-          case 'H'
+          case 'H':
             //initialize kurdish hour
             $kurdish_hour = get_hour_24($date);
             $result .= translate_number_to_kurdish($kurdish_hour);
