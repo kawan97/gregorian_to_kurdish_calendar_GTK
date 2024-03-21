@@ -43,6 +43,7 @@ $date = "2024-03-21 13:34:15";
 $format = "Y - m - d | l | F | a |g:i:s";
 echo gregorian_to_kurdish($date, $format);
 //output: "٢٧٢٤ - ١ - ١ | ٥ شەمە | نەورۆز | د.ن |١:٣٤:١٥"
+```
 
 ## License
 
