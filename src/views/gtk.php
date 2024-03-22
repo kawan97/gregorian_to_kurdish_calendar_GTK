@@ -25,7 +25,7 @@
 </head>
 <body >
 
-<h1>Gregorian To Kurdish Calendar Laravel Package</h1>
+<h1>Gregorian To Kurdish Calendar Package ساڵنامەی زاینی بۆ ساڵنامەی کوردی</h1>
 <p>
     <a href="https://packagist.org/packages/kawan/gregorian_to_kurdish_calendar">
         <img src="https://img.shields.io/packagist/dt/kawan/gregorian_to_kurdish_calendar" alt="Total Downloads">
@@ -34,6 +34,58 @@
         <img src="https://img.shields.io/packagist/v/kawan/gregorian_to_kurdish_calendar" alt="Latest Version">
     </a>
 </p>
+
+<h2>کوردی</h2>
+
+<p>ئەم پاکێجە ڕێگەت پێدەدات بەروارەکان لە ساڵنامەی زاینیەوە بگۆڕیت بۆ ساڵنامەی کوردی.</p>
+
+<h2>دامەزراندن</h2>
+
+<p>دەتوانیت لە ڕێگەی کۆمپۆزەر پاکێجەکە دابمەزرێنیت بە جێبەجێکردنی ئەم فرمانەی خوارەوە:</p>
+
+<pre><code>composer require kawan/gregorian_to_kurdish_calendar
+</code></pre>
+
+<h2>بەکارهێنان</h2>
+
+<p>دوای دامەزراندن، دەتوانیت فەنکشنی <code>gregorian_to_kurdish($date,$format)</code> بەکاربهێنیت بۆ گۆڕینی بەروارەکان.فەنکشنەکە دوو پارامێتەر وەرئەگرێت: بەرواری گۆڕین و فۆرماتەکەی دەرچوونی خوازراو. </p>
+
+<ul>
+    <li><code>$date</code>: ئەو بەروارەی کە دەتەوێت بیگۆڕیت.</li>
+    <li><code>$format</code>:</li>
+    <li>   دەتوانیت پیتە ستانداردەکانی فۆرمات بەرواری پی ئێچ پی بەکاربهێنیت </li>
+    <li>   (Y, y, m, d, l, F, a, G, g, H, h, i, s).</li>
+    <li>   هەر پیتێکی تر وەک خۆی دەگەڕێتەوە.</li>
+</ul>
+
+<pre><code>$date = "2024-03-21";
+$format = "Y-d-m";
+echo gregorian_to_kurdish($date, $format);
+</code></pre>
+
+<h2>دیکۆمێنتەیشنی ناوخۆیی</h2>
+
+<p>لە کاتی دامەزراندندا، ئەم پاکێجە ڕاوتی دیکۆمێنتەیشنی ناوخۆیی دروست دەکات. دەتوانن لەم لینکەدا دەستتان پێ بگات 
+`your_domain/gtk-test`.</p>
+
+<h2>نموونە</h2>
+
+<p>لێرەدا چەند نموونەیەک لە بەکارهێنانی پاکێجەکە دەخەینەڕوو:</p>
+
+<pre><code>// Example 1
+$date = "2024-02-25";
+$format = "d-m-Y | F";
+echo gregorian_to_kurdish($date, $format);
+//output:  "٥-١٢-٢٧٢٣ | ڕەشەمێ" 
+
+// Example 2
+$date = "2024-03-21 13:34:15";
+$format = "Y - m - d | l | F | a |g:i:s";
+echo gregorian_to_kurdish($date, $format);
+//output: "٢٧٢٤ - ١ - ١ | ٥ شەمە | نەورۆز | د.ن |١:٣٤:١٥"
+</code></pre>
+
+<h2>English</h2>
 
 <p>This package allows you to convert dates from the Gregorian calendar to the Kurdish calendar.</p>
 
